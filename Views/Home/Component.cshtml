@@ -1,13 +1,13 @@
 @{
-    ViewData["Title"] = "Page with Component";
+    ViewData["Title"] = "Page with Component ";
 }
 
 <h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
 
 <p> 
-  This is a sample web page <br/>
   <div>
     @await Component.InvokeAsync("Simple")
    </div>
 </p>
+

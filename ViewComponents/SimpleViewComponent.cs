@@ -19,6 +19,7 @@ namespace MvcApp.ViewComponents
 		{ 
 			await Task.Delay(1000);
 			var data = GetSampleData();
+            ViewData["Message"] = "Component with page";
 			return View(data);
 		}
 

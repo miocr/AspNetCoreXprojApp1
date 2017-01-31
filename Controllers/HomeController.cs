@@ -28,6 +28,8 @@ namespace MvcApp.Controllers
 		public IActionResult Component()
 		{
 			//return ViewComponent("Simple");
+            ViewData["Message"] = "Home controller - action Component";
+ 
 			return View();
 		}
 

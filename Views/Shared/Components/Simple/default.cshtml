@@ -1,11 +1,18 @@
 @model IEnumerable<string>
 
-<hr/>
-<h3> Sample list component</h3>
+<div>********** SimpleViewComponent - default.cshtml - begin **********</div>
+
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<h3>Sample list component</h3>
 <ul>
   @foreach(var item in Model)
   {
     <li>@item</li>
   }
 </ul>
-<hr/>
+
+
+<div>********** SimpleViewComponent - default.cshtml - end **********</div>
