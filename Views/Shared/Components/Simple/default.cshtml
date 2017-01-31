@@ -1,0 +1,11 @@
+@model IEnumerable<string>
+
+<hr/>
+<h3> Sample list component</h3>
+<ul>
+  @foreach(var item in Model)
+  {
+    <li>@item</li>
+  }
+</ul>
+<hr/>
