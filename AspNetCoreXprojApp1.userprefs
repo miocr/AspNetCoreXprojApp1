@@ -1,10 +1,6 @@
 ﻿<Properties StartupConfiguration="{D027B446-C5B0-4FAB-80AE-6838972912CF}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="AspNetCoreXprojApp1 Status">
     <Files>
-      <File FileName="Controllers/HomeController.cs" Line="5" Column="32" />
-      <File FileName="ViewComponents/SimpleViewComponent.cs" Line="4" Column="21" />
-      <File FileName="Models/Person.cs" Line="3" Column="11" />
-      <File FileName="Views/Home/Index3.cshtml" Line="12" Column="10" />
       <File FileName="AspNetCoreXprojApp1 Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

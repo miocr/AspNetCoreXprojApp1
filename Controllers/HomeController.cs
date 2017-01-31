@@ -14,15 +14,15 @@ namespace MvcApp.Controllers
 			return View();
 		}
 
-		public IActionResult Index3()
+		public IActionResult TagHelper()
 		{
 			ViewBag.Title = "This is Index3";
 			Person person1 = new Person();
             person1.Age = 18;
             person1.Name = "Karel Novák";
             person1.PersonId = 1;
+            ViewData["Message"] = "Person model edit";
 			return View(person1);
-
 		}
 
 		public IActionResult Component()

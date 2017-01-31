@@ -3,10 +3,14 @@
 }
 @model MvcApp.Models.Person
 
-<!--
 <h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
--->
+
+<div class="well well-lg">
+Bindovani pres asp-for="Model.Property"  
+</div>
+
+
 
 <form asp-controller="Home" asp-action="Index3">
   <table>
