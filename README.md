@@ -1,2 +1,2 @@
-# learning
-# learning
+# learning AspNetCore with MSBuild (csproj)
+
