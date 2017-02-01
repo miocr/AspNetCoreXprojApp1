@@ -1,26 +1,55 @@
-﻿@{
-    ViewData["Title"] = "Index 3 page";
-}
+﻿@{ 
+  ViewData["Title"] = "TagHelper page"; 
+  } 
 @model MvcApp.Models.Person
 
 <h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
 
 <div class="well well-lg">
-Bindovani pres asp-for="Model.Property"  
+  Bindovani pres asp-for="Model.Property"
 </div>
 
+<div style="font-size:20px;">
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+</div>
 
+<!-- toogle buttons -->
+<div class="panel">
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-info glyphicon glyphicon-user"><input type="checkbox"/> Option 1</label>
+    <label class="btn btn-primary glyphicon glyphicon-envelope"><input type="checkbox"/> Option 2</label>
+    <label class="btn btn-danger glyphicon glyphicon-cog"><input type="checkbox"/> Option 3</label>
+  </div>
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-primary">
+	<input type="radio" name="options" id="option1"> Option 1</label>
+    <label class="btn btn-primary">
+	<input type="radio" name="options" id="option2"> Option 2</label>
+    <label class="btn btn-primary">
+	<input type="radio" name="options" id="option3"> Option 3</label>
+  </div>
+</div>
+<!-- /toogle buttons -->
 
 <form asp-controller="Home" asp-action="Index3">
   <table>
     <tr>
       <td><label asp-for="Name"></label></td>
+      <td> </td>
       <td><input asp-for="Name" /></td>
     </tr>
     <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
       <td><label asp-for="Age"></label></td>
-	  <td><input asp-for="Age" /></td>
+      <td> </td>
+      <td><input asp-for="Age" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
     </tr>
     <tr>
       <td></td>
@@ -28,5 +57,3 @@ Bindovani pres asp-for="Model.Property"
     </tr>
   </table>
 </form>
-
-
