@@ -6,6 +6,7 @@ namespace MvcApp.Models
     public class AppDbContext : DbContext
     {
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Computer> Computers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

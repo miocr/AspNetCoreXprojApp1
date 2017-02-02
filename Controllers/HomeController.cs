@@ -7,51 +7,68 @@ using MvcApp.Models;
 
 namespace MvcApp.Controllers
 {
-	public class HomeController : Controller
-	{
-		public IActionResult Index()
-		{
-			return View();
-		}
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
 
-		public IActionResult TagHelper()
-		{
-			ViewBag.Title = "This is Index3";
-			Person person1 = new Person();
+        public IActionResult TagHelper()
+        {
+            ViewBag.Title = "This is TagHelper page";
+            Person person1 = new Person();
             person1.Age = 18;
-            person1.Name = "Karel Novák";
-            person1.PersonId = 1;
+            person1.Name = "Karel Nowak";
+            //person1.SurName = "Nowak";
+            //person1.PersonId = 1;
             ViewData["Message"] = "Person model edit";
-			return View(person1);
-		}
+            using (var db = new AppDbContext())
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Persons.Add(person1);
+                    //db.SaveChanges();
 
-		public IActionResult Component()
-		{
-			//return ViewComponent("Simple");
+                    Computer computer1 = new Computer();
+                    computer1.Name = "Acer ASX1";
+                    computer1.Brand = "ACER";
+                    computer1.Owner = person1;
+                    db.Computers.Add(computer1);
+                    db.SaveChanges();
+                }
+
+            }
+            return View(person1);
+        }
+
+        public IActionResult Component()
+        {
+            //return ViewComponent("Simple");
             ViewData["Message"] = "Home controller - action Component";
- 
-			return View();
-		}
 
-		public IActionResult About()
-		{
+            return View();
+        }
 
-			ViewData["Message"] = "Your application description page.";
+        public IActionResult About()
+        {
 
-			return View();
-		}
+            ViewData["Message"] = "Your application description page.";
 
-		public IActionResult Contact()
-		{
-			ViewData["Message"] = "Your contact page.";
+            return View();
+        }
 
-			return View();
-		}
+        public IActionResult Contact()
+        {
+            ViewData["Message"] = "Your contact page.";
 
-		public IActionResult Error()
-		{
+            return View();
+        }
 
-			return View();
-		}
-	}
+        public IActionResult Error()
+        {
+
+            return View();
+        }
+    }
 }

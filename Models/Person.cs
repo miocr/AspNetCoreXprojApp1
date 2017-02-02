@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MvcApp.Models
 {
@@ -6,6 +7,12 @@ namespace MvcApp.Models
 	{
 		public int PersonId { get; set; }
   		public string Name { get; set; }
+
+		//public string SurName { get; set; }
+
   		public int Age { get; set; }
+
+		public List<Computer> Computers {get; set;}
 	}
+
 }
