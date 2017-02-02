@@ -1,7 +1,4 @@
-﻿@{ 
-  ViewData["Title"] = "TagHelper page"; 
-  } 
-@model MvcApp.Models.Person
+﻿@{ ViewData["Title"] = "TagHelper page"; } @model MvcApp.Models.Person
 
 <h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
@@ -18,9 +15,18 @@
 <!-- toogle buttons -->
 <div class="panel">
   <div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-info glyphicon glyphicon-user"><input type="checkbox"/> Option 1</label>
-    <label class="btn btn-primary glyphicon glyphicon-envelope"><input type="checkbox"/> Option 2</label>
-    <label class="btn btn-danger glyphicon glyphicon-cog"><input type="checkbox"/> Option 3</label>
+    <label class="btn btn-info"><input type="checkbox"/>
+      <span class="glyphicon glyphicon-user"></span> 
+      Option 1
+    </label>
+    <label class="btn btn-primary"><input type="checkbox"/>
+      <span class="glyphicon glyphicon-envelope"></span>
+      Option 2
+    </label>
+    <label class="btn btn-danger"><input type="checkbox"/>
+      <span class="glyphicon glyphicon-cog"></span> 
+      Option 3
+    </label>
   </div>
   <div class="btn-group" data-toggle="buttons">
     <label class="btn btn-primary">
@@ -33,7 +39,8 @@
 </div>
 <!-- /toogle buttons -->
 
-<form asp-controller="Home" asp-action="Index3">
+
+<form asp-controller="Home" asp-action="TagHelper">
   <table>
     <tr>
       <td><label asp-for="Name"></label></td>
