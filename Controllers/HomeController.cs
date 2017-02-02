@@ -9,6 +9,13 @@ namespace MvcApp.Controllers
 {
     public class HomeController : Controller
     {
+        private AppDbContext db;
+
+        public HomeController(AppDbContext dbContext)
+        {
+            db = dbContext;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -23,8 +30,9 @@ namespace MvcApp.Controllers
             //person1.SurName = "Nowak";
             //person1.PersonId = 1;
             ViewData["Message"] = "Person model edit";
-            using (var db = new AppDbContext())
+            //using (var db = new AppDbContext())
             {
+                
                 if (ModelState.IsValid)
                 {
                     db.Persons.Add(person1);
