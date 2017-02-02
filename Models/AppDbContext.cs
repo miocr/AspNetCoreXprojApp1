@@ -17,6 +17,12 @@ namespace MvcApp.Models
             optionsBuilder.UseSqlite("Filename=./appdata.db");
         }
 
+        //  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //  {
+        //      var sqlConnectionString = "User ID=owner;Password=cidm;Host=192.168.75.40;Port=5432;Database=owner;Pooling=true;";
+        //      optionsBuilder.UseNpgsql(sqlConnectionString);
+        //  }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

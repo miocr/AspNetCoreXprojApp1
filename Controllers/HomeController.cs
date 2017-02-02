@@ -26,9 +26,8 @@ namespace MvcApp.Controllers
             ViewBag.Title = "This is TagHelper page";
             Person person1 = new Person();
             person1.Age = 18;
-            person1.Name = "Karel Nowak";
-            //person1.SurName = "Nowak";
-            //person1.PersonId = 1;
+            person1.Name = "Karel";
+            person1.SurName = "Nowak";
             ViewData["Message"] = "Person model edit";
             //using (var db = new AppDbContext())
             {

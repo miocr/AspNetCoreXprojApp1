@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using MvcApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MvcApp
 {
@@ -30,8 +31,6 @@ namespace MvcApp
         {
             // Add framework services.
             services.AddMvc();
-
-            //var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;";
             services.AddDbContext<AppDbContext>();
         }
 
