@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<MvcApp.Models.Person>
+
+@{ 
+ViewData["Title"] = "Persons index Page"; 
+}
+
+<div class="page-header">
+  <h1>title<small>subtext</small></h1>
+</div>
+@{
+foreach (var pers in Model)
+{
+      <p>
+    @pers.Name
+    @pers.SurName
+    @pers.Age
+      </p>
+}
+
+}
+<!--
+x@Model.Name
+x@Model.SurName
+x@Model.Age
+-->
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+            Panel content
+      </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+       <p>Basic panel example</p>
+    </div>
+</div>
+
+
+
+

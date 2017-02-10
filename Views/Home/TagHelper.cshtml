@@ -1,4 +1,6 @@
-﻿@{ ViewData["Title"] = "TagHelper page"; } @model MvcApp.Models.Person
+﻿@{ ViewData["Title"] = "TagHelper page"; } 
+
+@model MvcApp.Models.Person
 
 <h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
@@ -7,9 +9,10 @@
   Bindovani pres asp-for="Model.Property"
 </div>
 
+
 <div style="font-size:20px;">
-<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+  <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
 </div>
 
 <!-- toogle buttons -->
@@ -38,6 +41,7 @@
   </div>
 </div>
 <!-- /toogle buttons -->
+
 
 
 <form asp-controller="Home" asp-action="TagHelper">
